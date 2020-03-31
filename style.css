@@ -1,0 +1,192 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+    text-shadow: none;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+body {
+    color: white;
+}
+
+.recept {
+    background-image: url(images/salat.jpg);
+    min-height: 200px;
+}
+
+.chle {
+    background-image: url(images/chlebicek.jpg);
+}
+
+.taco {
+    background-image: url(images/tacos.jpg);
+}
+
+.cizr {
+    background-image: url(images/cizrna.jpg);
+}
+
+.burg {
+    background-image: url(images/burger.jpg);
+}
+
+.recepis {
+    min-height: 90px;
+}
+
+h1, h2 {
+    margin: 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h1 {
+    font-family: raleway;
+    font-weight: 800;
+    font-size: 28px;
+    
+}
+
+h2 {
+    font-family: raleway;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+p {
+    margin: 5px;
+}
+
+.recept, .recepis {
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recept-nazev {
+    margin: 0;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 480px) {
+    .recept, .recepis {
+        padding: 20px;
+    }
+
+    .recepis {
+        min-height: 150px;
+        flex: 1 1 50%;
+    }
+
+    .recept {
+        min-height: 250px;
+    }
+
+    h1 {
+        font-family: raleway;
+        font-weight: 800;
+        font-size: 36px;
+        
+    }
+    
+    h2 {
+        font-family: raleway;
+        font-weight: 800;
+        font-size: 22px;
+    }
+    
+    .chle {
+        border-right: 1px solid white;
+    }
+
+    .cizr {
+        border-right: 1px solid white;
+    }
+
+    .dvojcka {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .recept:nth-child(2n+1) {
+        border-right: 1px solid white;
+    }
+}
+
+@media (min-width: 860px) { 
+
+    .kontejner {
+        display: flex;
+    }
+
+    .recept, .dvojcka {
+        max-width: 33.3%;
+        display: inline-block;
+    }
+
+    .recept {
+        min-height: 400px;
+        border-right: 1px solid white;
+        display: flex;
+
+    }
+
+    .recepis {
+        min-height: 200px;
+    }
+
+    h1 {
+    font-family: raleway;
+    font-weight: 800;
+    font-size: 48px;
+    }
+
+    h2 {
+    font-family: raleway;
+    font-weight: 800;
+    font-size: 28px;
+    }
+}
